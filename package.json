@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "antd-mobile": "^2.3.1",
+    "echarts": "^4.4.0",
+    "es6-promise": "^4.2.8",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-loadable": "^5.5.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-sublime-video": "^0.2.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "probuild": "webpack --progress --colors --config ./webpack/webpack.prod.config.js",
+    "devbuild": "webpack --progress --colors --config ./webpack/webpack.dev.config.js",
+    "prod": "webpack-dev-server --progress --colors --content-base build --config ./webpack/webpack.prod.config.js",
+    "dev": "webpack-dev-server --progress --colors --content-base build --config ./webpack/webpack.dev.config.js --open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +33,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.12.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
