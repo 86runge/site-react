@@ -1,0 +1,26 @@
+@import "../../../common/style/variable";
+
+.header {
+  .site-nav {
+    width: $maxWidth;
+    height: 35px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .welcome {
+      display: flex;
+
+      .login-text {
+        margin-left: 10px;
+      }
+    }
+
+    .site-map {
+      .map-text {
+        margin-left: 5px;
+      }
+    }
+  }
+}

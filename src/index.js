@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import RouterConfig from './router';
+import App from './app/app';
 
 ReactDOM.render(
-    <RouterConfig />,
+    <App/>,
     document.getElementById('root')
 );
 

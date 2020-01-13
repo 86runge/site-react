@@ -1,0 +1,28 @@
+.manage-box {
+  min-width: 1200px;
+  height: 100%;
+  //顶部导航条
+  .manage-nav-box {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 48px;
+  }
+  //下面部分
+  .manage-section {
+    position: relative;
+    top: 48px;
+    //左侧菜单
+    .manage-sidebar {
+      position: fixed;
+      height: 100%;
+      width: 200px;
+    }
+    //主体部分
+    .manage-main {
+      height: 1200px;
+      margin-left: 200px;
+      padding: 20px;
+    }
+  }
+}

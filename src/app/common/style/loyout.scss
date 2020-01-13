@@ -1,0 +1,33 @@
+@import "variable";
+
+//全局样式设置
+body {
+  font-size: 12px;
+}
+
+#root {
+  height: 100%;
+}
+
+.page {
+  min-width: $maxWidth;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    height: 35px;
+    border-bottom: 1px solid $borderColor;
+    background: $blockBg;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+
+  .footer {
+    height: 120px;
+    border-top: 1px solid $borderColor;
+    background: $blockBg;
+  }
+}

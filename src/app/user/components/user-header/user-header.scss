@@ -1,0 +1,20 @@
+@import "../../../common/style/variable";
+
+.user-header {
+  display: flex;
+  align-items: center;
+  height: 150px;
+  background: #91d5ff;
+  .user-logo-content {
+    width: 100px;
+    margin-left: 25px;
+    .logo-img {
+      width: 100%;
+    }
+  }
+  .user-title {
+    width: 150px;
+    text-align: center;
+    font-size: 30px;
+  }
+}

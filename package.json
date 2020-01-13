@@ -2,22 +2,11 @@
   "name": "react-demo",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "antd-mobile": "^2.3.1",
-    "echarts": "^4.4.0",
-    "es6-promise": "^4.2.8",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-loadable": "^5.5.0",
-    "react-router-config": "^5.1.1",
-    "react-router-dom": "^5.1.2",
-    "react-sublime-video": "^0.2.5"
-  },
   "scripts": {
-    "probuild": "webpack --progress --colors --config ./webpack/webpack.prod.config.js",
-    "devbuild": "webpack --progress --colors --config ./webpack/webpack.dev.config.js",
-    "prod": "webpack-dev-server --progress --colors --content-base build --config ./webpack/webpack.prod.config.js",
-    "dev": "webpack-dev-server --progress --colors --content-base build --config ./webpack/webpack.dev.config.js --open"
+    "probuild": "webpack --progress --colors --config config/webpack.prod.config.js",
+    "devbuild": "webpack --progress --colors --config config/webpack.dev.config.js",
+    "prod": "webpack-dev-server --progress --colors --content-base build --config config/webpack.prod.config.js",
+    "dev": "webpack-dev-server --progress --colors --content-base build --config config/webpack.dev.config.js --open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +23,22 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "antd": "^3.25.1",
+    "axios": "^0.19.0",
+    "echarts": "^4.4.0",
+    "es6-promise": "^4.2.8",
+    "moment": "^2.24.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^7.1.3",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-sublime-video": "^0.2.5",
+    "redux": "^4.0.4",
+    "redux-chunk": "^1.0.11"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -46,9 +51,12 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "jsonminify": "^0.4.1",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "react-dev-utils": "^9.1.0",
+    "react-hot-loader": "^4.12.18",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
