@@ -1,10 +1,10 @@
 import React from 'react';
-import {Form, Input, Tooltip, Icon, Cascader, Select, Col, Checkbox, Button} from 'antd';
+import {Form, Input, Tooltip, Icon, Select, Col, Checkbox, Button} from 'antd';
 
-import ImgCheck from '@/common/components/verification-code/img-check';
+import ImgCheck from '../../../common/components/verification-code/img-check';
 
-import regExp from "@/common/utils/regExp";
-import AxiosHttp from '@/common/utils/axios';
+import regExp from "../../../common/utils/component/reg-exp";
+import AxiosHttp from '../../../common/utils/http/axios';
 
 const {Option} = Select;
 

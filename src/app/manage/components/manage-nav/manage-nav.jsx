@@ -1,17 +1,39 @@
 import React from 'react';
 import './manage-nav.scss';
 
+import {connect} from 'react-redux';
 import {Menu, Icon} from 'antd';
 
-export default class ManageNav extends React.Component {
+import {Link} from 'react-router-dom';
+import store from "../../store/store";
+import {changeNav} from "../../store/manage-nav/action";
+import {changeMenu} from "../../store/manage-menu/action";
+
+import {DEFAULT_MENU} from "../../../common/const/manage/default-menu";
+
+class ManageNav extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     state = {
-        current: 'overview',
+        selectedNav: 'overview',
     };
+
+    componentWillMount() {
+        this.setState({
+            selectedNav: this.props.navInfo,
+        });
+    }
 
     handleClick = e => {
         this.setState({
-            current: e.key,
+            selectedNav: e.key,
+        }, () => {
+            store.dispatch(changeNav(this.state.selectedNav));
+            // 切换导航条时，清空存储的菜单
+            store.dispatch(changeMenu(DEFAULT_MENU[this.state.selectedNav]));
         });
     };
 
@@ -22,48 +44,49 @@ export default class ManageNav extends React.Component {
                     <img className={'logo-img'} src="/static/images/common/dashboard.jpg" alt=""/>
                 </div>
                 <div className={'manage-nav-content'}>
-                    <Menu theme="dark" onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                    <Menu theme="dark" onClick={this.handleClick} selectedKeys={[this.state.selectedNav]}
+                          mode="horizontal">
                         <Menu.Item key="overview">
-                            <a href={'#/manage/overview'}>
+                            <Link to={'/manage/overview'}>
                                 <Icon type="home"/>
                                 概览
-                            </a>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="setting">
-                            <a href={'#/manage/setting'}>
+                            <Link to={'/manage/setting'}>
                                 <Icon type="setting"/>
                                 设置
-                            </a>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="user">
-                            <a href={'#/manage/user-list'}>
+                            <Link to={'/manage/user'}>
                                 <Icon type="user"/>
                                 用户
-                            </a>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="business">
-                            <a href={'#/manage/business-list'}>
+                            <Link to={'/manage/business'}>
                                 <Icon type="team"/>
                                 商家
-                            </a>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="product">
-                            <a href={'#/manage/product-list'}>
+                            <Link to={'/manage/product'}>
                                 <Icon type="table"/>
                                 商品
-                            </a>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="order">
-                            <a href={'#/manage/order-list'}>
+                            <Link to={'/manage/order'}>
                                 <Icon type="solution"/>
                                 订单
-                            </a>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="mall">
-                            <a href={'#/manage/mall'}>
+                            <Link to={'/manage/mall'}>
                                 <Icon type="inbox"/>
                                 商城装修
-                            </a>
+                            </Link>
                         </Menu.Item>
                     </Menu>
                 </div>
@@ -71,3 +94,9 @@ export default class ManageNav extends React.Component {
         )
     }
 }
+
+export default connect(state => (state.navInfo),
+    {
+        changeNav,
+        changeMenu
+    })(ManageNav);

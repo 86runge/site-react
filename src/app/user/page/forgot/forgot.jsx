@@ -1,6 +1,6 @@
 import React from 'react';
 import ForgotForm from './forgot-form';
-import UserHeader from '@/user/components/user-header/user-header'
+import UserHeader from '../../../user/components/user-header/user-header'
 
 export default class Login extends React.Component {
     constructor(props) {

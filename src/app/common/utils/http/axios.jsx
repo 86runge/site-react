@@ -1,5 +1,5 @@
-import axios from 'axios';
-import baseURL from './baseUrl';
+import axios from '../../../common/utils/http/axios';
+import baseUrl from '../config/base-url';
 
 import { Modal, Button } from 'antd';
 
@@ -37,7 +37,7 @@ class AxiosHttp {
             let _option = {
                 method,
                 url: url,
-                baseURL: baseURL,
+                baseURL: baseUrl,
                 timeout: 30000,
                 params: null,
                 data: data,
@@ -71,9 +71,9 @@ export default new AxiosHttp();
 //         // `method` 是创建请求时使用的方法
 //         method: 'get', // 默认是 get
 //
-//     // `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。
-//     // 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL
-//     baseURL: 'https://some-domain.com/api/',
+//     // `baseUrl` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。
+//     // 它可以通过设置一个 `baseUrl` 便于为 axios 实例的方法传递相对 URL
+//     baseUrl: 'https://some-domain.com/api/',
 //
 //     // `transformRequest` 允许在向服务器发送前，修改请求数据
 //     // 只能用在 'PUT', 'POST' 和 'PATCH' 这几个请求方法

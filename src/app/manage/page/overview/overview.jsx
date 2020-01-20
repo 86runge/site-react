@@ -59,6 +59,9 @@ export default class Overview extends React.Component {
                 </div>
                 <div className={'overview-table'}>
                     <OverviewTable/>
+                    <OverviewTable/>
+                    <OverviewTable/>
+                    <OverviewTable/>
                 </div>
             </div>
         );

@@ -2,7 +2,7 @@ import React from 'react';
 import {HashRouter, Switch, Route} from 'react-router-dom';
 
 // 用户模块
-import AsyncLoader from "../common/utils/asyncLoader";
+import AsyncLoader from "../common/utils/component/async-loader";
 
 const login = AsyncLoader(() => import ('./page/login/login'));
 const register = AsyncLoader(() => import('./page/register/register'));

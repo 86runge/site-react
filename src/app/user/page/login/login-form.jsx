@@ -1,9 +1,9 @@
 import React from 'react';
 import {Form, Icon, Input, Button, Checkbox, Col} from 'antd';
 
-import SliderCheck from '@/common/components/verification-code/slider-check';
+import SliderCheck from '../../../common/components/verification-code/slider-check';
 
-import AxiosHttp from '@/common/utils/axios';
+import AxiosHttp from '../../../common/utils/http/axios';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -19,7 +19,6 @@ class LoginForm extends React.Component {
      * @param isSuccess
      */
     handleVerification(isSuccess) {
-        console.log('isSuccess', isSuccess);
         this.setState({verificationStatus: isSuccess}, () => {
             this.props.form.resetFields('verification');
         });

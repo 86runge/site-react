@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import Header from '@/frontend/components/header/header';
-import Nav from '@/frontend/components/nav/nav';
-import Footer from '@/frontend/components/footer/footer';
+import Header from '../../../frontend/components/header/header';
+import Nav from '../../../frontend/components/nav/nav';
+import Footer from '../../../frontend/components/footer/footer';
 
 import './home.scss';
 

@@ -1,12 +1,12 @@
 /**
  * 全局配置文件
  */
-let baseURL;
+let baseUrl;
 if (process.env.NODE_ENV === 'development') {
-    baseURL = '/api';
+    baseUrl = '/api';
 } else {
-    baseURL = '/';
+    baseUrl = '/';
 }
 
 
-export default baseURL
+export default baseUrl

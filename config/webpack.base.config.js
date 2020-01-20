@@ -1,5 +1,5 @@
 const path = require('path');
-// const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 // const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -96,7 +96,7 @@ module.exports = {
                 discardComments: { removeAll: true } // 移除注释
             }
         }),
-        // new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
         // new BundleAnalyzerPlugin(),
     ]
 };

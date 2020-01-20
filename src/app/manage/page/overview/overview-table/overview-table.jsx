@@ -39,9 +39,15 @@ const data = [
 ];
 
 export default class OverviewTable extends React.Component {
+
+
+    titleEvent = () => {
+        return 'title'
+    };
+
     render() {
         return (
-            <Table columns={columns} dataSource={data} size="small"/>
+            <Table bordered columns={columns} dataSource={data} size="middle" title={this.titleEvent}/>
         )
     }
 }

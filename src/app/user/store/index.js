@@ -4,7 +4,7 @@ import * as login from './login/reducer';
 
 let store = createStore(
     combineReducers({...login}),
-    // applyMiddleware(thunk)
+    applyMiddleware(thunk)
 );
 
 export default store;

@@ -1,6 +1,6 @@
 import React from 'react';
 import RegisterForm from "./register-form";
-import UserHeader from '@/user/components/user-header/user-header'
+import UserHeader from '../../../user/components/user-header/user-header'
 
 export default class register extends React.Component{
     render() {

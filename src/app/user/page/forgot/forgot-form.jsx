@@ -1,9 +1,9 @@
 import React from 'react';
 import {Form, Icon, Input, Button} from 'antd';
 
-import SliderCheck from '@/common/components/verification-code/slider-check';
+import SliderCheck from '../../../common/components/verification-code/slider-check';
 
-import AxiosHttp from '@/common/utils/axios';
+import AxiosHttp from '../../../common/utils/http/axios';
 
 class ForgotForm extends React.Component {
     constructor(props) {
